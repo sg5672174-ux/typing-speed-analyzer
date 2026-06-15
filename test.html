@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>typing test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="test">
+
+    <a href="index.html">Home</a>
+
+    <h1>Typing Test</h1>
+    <h3 id="timer">Time: 0 sec</h3>
+    <h2 id="welcome"></h2>
+
+    <label>Select Level:</label>
+    <select id="level" onchange="setParagraph()">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+
+    <p id="sentence"></p>
+
+    <textarea id="typingInput" placeholder="Start typing here..."></textarea>
+
+    <br><br>
+
+    <button onclick="submitTest()">Submit</button>
+    <button onclick="restartTest()">Restart</button>
+
+    <div id="resultBox" class="result-box">
+        <div class="result-content">
+            <h2>Result</h2>
+            <p id="timeResult"></p>
+            <p id="accuracyResult"></p>
+            <p id="wpmResult"></p>
+            <button onclick="closeResult()">OK</button>
+        </div>
+    </div>
+
+    <h2>Leaderboard 🏆</h2>
+    <ul id="leaderboard"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
